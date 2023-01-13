@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from vendor.forms import Vendorform
+from vendor.forms import VendorForm
 from .forms import UserForm
 from django.shortcuts import redirect
 from .models import User, UserProfile
@@ -66,7 +66,7 @@ def registerVendor(request):
     elif request.method == 'POST':
         # store the data and create the user
         form = UserForm(request.POST)
-        v_form = Vendorform(request.POST, request.FILES)
+        v_form = VendorForm(request.POST, request.FILES)
         if form.is_valid() and v_form.is_valid():
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
@@ -99,7 +99,7 @@ def registerVendor(request):
             print(form.errors)
     else:
         form = UserForm()
-        v_form = Vendorform()
+        v_form = VendorForm()
 
     context = {
         'form': form,
