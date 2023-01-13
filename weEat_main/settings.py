@@ -154,4 +154,4 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'WeEat Marketplace <django.weeat@gmail.com>'
 
-GOOGLE_API_KEY = 'AIzaSyBcIcxDJmS-javPFoE9aY7lb5ue_-9G3IY'
+GOOGLE_API_KEY = config('GOOGLE_API_KEY')
