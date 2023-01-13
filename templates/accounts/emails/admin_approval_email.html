@@ -1,0 +1,15 @@
+{% autoescape off %}
+
+Hi {{user.first_name}},
+
+{% if is_approved %}
+Congratulations! Your restaurant has been approved by our admim team. 
+
+--WeEat
+{% else %}
+We are sorry! You are not eligible for publishing your food menu on our marketplace, please contact support@weeat.com.
+
+--WeEat
+{% endif %}
+
+{% endautoescape %}
