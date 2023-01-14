@@ -88,6 +88,7 @@ def add_category(request):
 
     else:
         form = CategoryForm()
+        # form.fields['category_name'].queryset = Category.objects.filter(vendor=get_vendor(request))
     context = {
         'form': form,
     }
